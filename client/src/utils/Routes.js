@@ -17,6 +17,7 @@ import TopicCopy from '../containers/Topic/TopicCopy';
 import Loading from '../containers/Loading';
 import ConsumerGroupList from '../containers/ConsumerGroup/ConsumerGroupList';
 import ConsumerGroup from '../containers/ConsumerGroup/ConsumerGroupDetail';
+import StreamsList from '../containers/Streams/StreamsList';
 import Schema from '../containers/Schema/SchemaDetail/Schema';
 import SchemaList from '../containers/Schema/SchemaList/SchemaList';
 import SchemaCreate from '../containers/Schema/SchemaCreate/SchemaCreate';
@@ -223,7 +224,9 @@ class Routes extends Root {
                   component={AclDetails}
                 />
               )}
-
+              {roles && roles.SCHEMA && roles.SCHEMA.includes('READ') && (
+                <Route exact path="/ui/:clusterId/streams" component={StreamsList} />
+              )}
               {roles && roles.SCHEMA && roles.SCHEMA.includes('READ') && (
                 <Route exact path="/ui/:clusterId/schema" component={SchemaList} />
               )}

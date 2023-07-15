@@ -36,6 +36,7 @@ export const TAIL = 'tail';
 export const GROUP = 'group';
 export const ACLS = 'acls';
 export const SCHEMA = 'schema';
+export const STREAMS = 'streams';
 export const CONNECT = 'connect';
 export const KSQLDB = 'ksqldb';
 export const SETTINGS = 'settings';
@@ -94,6 +95,7 @@ export default {
   GROUP,
   ACLS,
   SCHEMA,
+  STREAMS,
   CONNECT,
   KSQLDB,
   TYPES,

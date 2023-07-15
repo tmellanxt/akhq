@@ -358,7 +358,8 @@ class Sidebar extends Component {
             roles &&
             roles.SCHEMA &&
             roles.SCHEMA.includes('READ') &&
-            this.renderMenuItem('fa fa-fw fa-cogs', constants.SCHEMA, 'Schema Registry')}
+            this.renderMenuItem('fa fa-fw fa-cogs', constants.SCHEMA, 'Schema')}
+          {this.renderMenuItem('fa fa-fw fa-cogs', constants.STREAMS, 'Kafka Streams')}
           {enableConnect && roles && roles.CONNECTOR && roles.CONNECTOR.includes('READ') && (
             <NavItem
               eventKey="connects"

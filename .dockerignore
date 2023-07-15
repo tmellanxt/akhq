@@ -6,3 +6,4 @@ node_modules/
 build/
 out/
 *.hprof
+build-project.sh
